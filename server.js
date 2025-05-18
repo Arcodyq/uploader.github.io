@@ -19,7 +19,7 @@ const upload = multer({ storage: storage });
 app.use(express.static('public'));
 
 // Endpoint do uploadu plików
-app.post('/upload', upload.single('music'), (req, res) => {
+app.post('uploader.github.io//upload', upload.single('music'), (req, res) => {
   if (!req.file) return res.status(400).send('Nie przesłano pliku.');
   res.send(`Plik przesłany: ${req.file.filename}`);
 });
